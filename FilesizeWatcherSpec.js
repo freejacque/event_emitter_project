@@ -25,6 +25,24 @@ describe('FilesizeWatcher', function ({
       exec('echo "test" > ' + path, function() {});
 
     });
+
+  });
+
+  it('should fire a "shrink" event when the file grew in size', function(done) {
+
+    var path = '/var/tmp/filesizewatcher.test';
+    exec('rm -f' + path + ' ; echo "test" > ' + path, function() {
+      watcher = new FilesizeWatcher(path);
+
+      watcher.on('shrink', function(loss) {
+        expect(loss).toBe(3);
+        done();
+      });
+
+      exec('echo "a" > ' + path, function() {});
+
+    });
+
   });
 
 }))
