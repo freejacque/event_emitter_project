@@ -45,4 +45,8 @@ describe('FilesizeWatcher', function ({
 
   });
 
+  it('should fire "error" if path does not start with a slash', function(done) {
+
+  })
+
 }))
