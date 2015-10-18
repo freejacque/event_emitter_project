@@ -35,4 +35,6 @@ FilesizeWatcher.prototype.on = function(eventType, callback) {
   this.callbacks[eventType] = callback;
 };
 
-
+FilesizeWatcher.prototype.stop = function() {
+  clearInterval(this.interval);
+};
