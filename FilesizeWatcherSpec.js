@@ -1,6 +1,8 @@
 'use strict';
 
+// require the two modules
 var FilesizeWatcher = require('./FilesizeWatcher');
+// the exec func is used manipulate the test file through shell commands
 var exec = require('child_process').exec;
 
 describe('FilesizeWatcher', function ({
