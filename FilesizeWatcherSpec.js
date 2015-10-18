@@ -47,6 +47,14 @@ describe('FilesizeWatcher', function ({
 
   it('should fire "error" if path does not start with a slash', function(done) {
 
-  })
+    var path = 'var/tmp/filesizewatcher.test';
+    watcher = new FilesizeWatcher(path);
 
-}))
+    watcher.on('error', function(err) {
+      expect(err).toBe('Path does not start with a slash');
+      done();
+    });
+
+  });
+
+});
