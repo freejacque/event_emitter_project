@@ -11,4 +11,19 @@ var FilesizeWatcher = function(path) {
     self.callbacks['error']('Path does not start with a slash');
     return;
   }
+
+  fs.stat(path, function(err, status) {
+    self.lastfilesize = stats.size;
+  });
+
+  self.interval = setInterval(
+    function() {
+      fs.stat(path, function(err, stats) {
+        if(stats.size > self.lastfilesize) {
+          self.callbacks['grew'](stats.size - self.lastfilesize);
+          self.lastfilesize = stats.size;
+        }
+      })
+    }
+    )
 }
