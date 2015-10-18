@@ -31,4 +31,8 @@ var FilesizeWatcher = function(path) {
     });
 };
 
+FilesizeWatcher.prototype.on = function(eventType, callback) {
+  this.callbacks[eventType] = callback;
+};
+
 
