@@ -23,6 +23,10 @@ var FilesizeWatcher = function(path) {
           self.callbacks['grew'](stats.size - self.lastfilesize);
           self.lastfilesize = stats.size;
         }
+        if(stats.size < self.lastfilesize) {
+          self.callbacks['shrank'](self.lastfilesize - stats.size);
+          self .lastfilesize = stats.size;
+        }
       })
     }
     )
