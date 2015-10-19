@@ -19,6 +19,7 @@ var FilesizeWatcher = function(path) {
     return;
   }
 
+// used to store the file size of the given path
   fs.stat(path, function(err, status) {
     self.lastfilesize = stats.size;
   });
