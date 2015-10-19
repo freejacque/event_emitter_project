@@ -3,6 +3,7 @@
 // load the fs module for the stat function
 var fs = require('fs');
 
+// FilesizeWatcher constructor function
 var FilesizeWatcher = function(path) {
   var self = this;
 
