@@ -24,6 +24,7 @@ var FilesizeWatcher = function(path) {
     self.lastfilesize = stats.size;
   });
 
+// 1-sec interval for checking file size using the stat function
   self.interval = setInterval(
     function() {
       fs.stat(path, function(err, stats) {
