@@ -5,6 +5,9 @@ var fs = require('fs');
 
 // FilesizeWatcher object constructor function
 var FilesizeWatcher = function(path) {
+  // the object instance variable is set to a local variable
+  // so that the object can be instantiated within callback functions,
+  //  where 'this' would point to another object
   var self = this;
 
   self.callbacks = {};
