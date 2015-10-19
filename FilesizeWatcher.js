@@ -13,6 +13,7 @@ var FilesizeWatcher = function(path) {
 //  will be used as an associative array to store a callback for each event
   self.callbacks = {};
 
+// check if the file begins with a slash, if not throw error message
   if(/^\//.test(path) === false) {
     self.callbacks['error']('Path does not start with a slash');
     return;
