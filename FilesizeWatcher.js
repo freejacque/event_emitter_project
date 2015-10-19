@@ -10,6 +10,7 @@ var FilesizeWatcher = function(path) {
   //  where 'this' would point to another object
   var self = this;
 
+//  will be used as an associative array to store a callback for each event
   self.callbacks = {};
 
   if(/^\//.test(path) === false) {
