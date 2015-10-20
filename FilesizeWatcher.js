@@ -42,6 +42,8 @@ var FilesizeWatcher = function(path) {
     });
 };
 
+
+//  on method: stores the callback under the event name
 FilesizeWatcher.prototype.on = function(eventType, callback) {
   this.callbacks[eventType] = callback;
 };
