@@ -30,7 +30,7 @@ describe('FilesizeWatcher', function (){
 
   });
 
-  it('should fire a "shrink" event when the file shrinks in size', function(done) {
+  it('should fire a "shrank" event when the file shrank in size', function(done) {
 
     var path = '/var/tmp/filesizewatcher.test';
     exec('rm -f' + path + ' ; echo "test" > ' + path, function() {
