@@ -36,7 +36,7 @@ describe('FilesizeWatcher', function (){
     exec('rm -f' + path + ' ; echo "test" > ' + path, function() {
       watcher = new FilesizeWatcher(path);
 
-      watcher.on('shrink', function(loss) {
+      watcher.on('shrank', function(loss) {
         expect(loss).toBe(3);
         done();
       });
