@@ -15,6 +15,7 @@ var FilesizeWatcher = function(path) {
 
 // check if the file begins with a slash, if not throw error message
   if(/^\//.test(path) === false) {
+    // added to make sure that the the error callback is called after it is defined
     process.nextTick(function() {
       self.callbacks['error']('Path does not start with a slash');
     });
