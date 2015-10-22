@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // load the fs module for the stat function
 var fs = require('fs');
