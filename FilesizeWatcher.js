@@ -37,7 +37,7 @@ var FilesizeWatcher = function(path) {
         }
         // if the file size decreases
         if(stats.size < self.lastfilesize) {
-          self.callbacks['shrank'](self.lastfilesize - stats.size);
+          self.emit('shrank', self.lastfilesize - stats.size);
           self.lastfilesize = stats.size;
         }
       }, 1000);
