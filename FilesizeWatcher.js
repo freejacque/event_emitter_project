@@ -32,7 +32,7 @@ var FilesizeWatcher = function(path) {
       fs.stat(path, function(err, stats) {
         // if the file grows in size
         if(stats.size > self.lastfilesize) {
-          self.callbacks['grew'](stats.size - self.lastfilesize);
+          self.emit('grew', stats.size - self.lastfilesize);
           self.lastfilesize = stats.size;
         }
         // if the file size decreases
