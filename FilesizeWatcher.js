@@ -46,11 +46,6 @@ var FilesizeWatcher = function(path) {
 
 util.inherits(FilesizeWatcher, EventEmitter);
 
-//  on method: stores the callback under the event name
-FilesizeWatcher.prototype.on = function(eventType, callback) {
-  this.callbacks[eventType] = callback;
-};
-
 //  cancels the interval set in the constructor
 FilesizeWatcher.prototype.stop = function() {
   clearInterval(this.interval);
