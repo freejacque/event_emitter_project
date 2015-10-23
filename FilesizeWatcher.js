@@ -44,6 +44,7 @@ var FilesizeWatcher = function(path) {
     });
 };
 
+//  makes the class a descendant of events.EventEmitter
 util.inherits(FilesizeWatcher, EventEmitter);
 
 //  cancels the interval set in the constructor
