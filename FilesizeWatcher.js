@@ -3,6 +3,7 @@
 // load the fs module for the stat function
 var fs = require('fs');
 var util = require('util');
+var EventEmitter = require('events').EventEmitter;
 
 // FilesizeWatcher object constructor function
 var FilesizeWatcher = function(path) {
