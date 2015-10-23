@@ -12,9 +12,6 @@ var FilesizeWatcher = function(path) {
   //  where 'this' would point to another object
   var self = this;
 
-//  will be used as an associative array to store a callback for each event
-  self.callbacks = {};
-
 // check if the file begins with a slash, if not throw error message
   if(/^\//.test(path) === false) {
     // added to make sure that the the error callback is called after it is defined
