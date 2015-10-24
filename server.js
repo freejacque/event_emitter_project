@@ -21,4 +21,9 @@ http.createServer(function(request, response) {
     response.end(JSON.stringify(result));
   }, 2000 + Math.floor(Math.random() & 1000));
 
-})
+}).listen(
+  8080,
+  function() {
+    console.log('Echo Server listening on port 8080');
+  }
+);
