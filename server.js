@@ -27,3 +27,5 @@ http.createServer(function(request, response) {
     console.log('Echo Server listening on port 8080');
   }
 );
+
+// This is a simple echo server used to simultae a remote webservice API
