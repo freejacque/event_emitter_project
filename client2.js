@@ -23,6 +23,7 @@ var getUserStatus = function(callback) {
     });
 };
 
+// async parallel lets you call a function when all the asynchronous calls are completed
 async.parallel([getUserName, getUserStatus], function(err, results) {
   console.log('The status of user ', results[0], ' is', results[1]);
 });
