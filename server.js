@@ -28,4 +28,4 @@ http.createServer(function(request, response) {
   }
 );
 
-// This is a simple echo server used to simultae a (slow) remote webservice API
+// This is a simple echo server used to simulate a (slow) remote webservice API
