@@ -19,6 +19,20 @@ async.series([
     });
   },
 
+  function(callback) {
+    request.get(url + 'getUserCountry?id=1234', function(err, res, body) {
+      callback(null, 'Country: ' + JSON.parse(body).value);
+    });
+  },
+
+  function(callback) {
+    request.get(url + 'getUserAge?id=1234', function(err, res, body) {
+      callback(null, 'Age: ' + JSON.parse(body).value);
+    });
+  }
+
+],
 
 
-])
+
+)
