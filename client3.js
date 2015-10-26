@@ -33,6 +33,10 @@ async.series([
 
 ],
 
+
+//  this is the callback function that will be triggered when all of
+//  functions in the series have finished, or if one of the series
+//  throws an error
   function(err, results) {
     for (var i = 0; i < results.length; i++) {
       console.log(results[i]);
