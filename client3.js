@@ -40,3 +40,7 @@ async.series([
   }
 
 );
+
+// This is an example case for using async.series
+//  We can collect the results of each step
+// and do something with them once they are all finished
