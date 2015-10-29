@@ -21,8 +21,13 @@ async.waterfall([
 
   function(sId, uId, callback) {
     request.get(url + 'getUserName?userId=' + uId, function(err, res, body) {
-
+      callback(null, JSON.parse(body).value, sId)
     })
+  }
+
+  function(err, name, sId) {
+    console.log('Name: ', name);
+    console.log('SessionID: ', sId);
   }
 
 
