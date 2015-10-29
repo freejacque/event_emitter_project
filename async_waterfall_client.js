@@ -19,7 +19,11 @@ async.waterfall([
     });
   },
 
+  function(sId, uId, callback) {
+    request.get(url + 'getUserName?userId=' + uId, function(err, res, body) {
 
+    })
+  }
 
 
 ])
