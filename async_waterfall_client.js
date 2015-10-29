@@ -13,5 +13,13 @@ async.waterfall([
     });
   },
 
+  function(sId, callback) {
+    request.get(url + 'getUserId?sessionId=' + sId, function(err, res, body) {
+      callback(null, sId, JSON.parse(body).value);
+    });
+  },
+
+
+
 
 ])
