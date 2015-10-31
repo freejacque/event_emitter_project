@@ -29,6 +29,7 @@ async.waterfall([
 
   ],
 
+  //  callback function
   function(err, name, sId) {
     console.log('Name: ', name);
     console.log('SessionID: ', sId);
