@@ -35,3 +35,6 @@ async.waterfall([
   }
 
 );
+
+// async waterfall executes steps in a series and lets
+// each successive step access the results of previous steps
