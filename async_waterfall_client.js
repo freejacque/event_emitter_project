@@ -10,19 +10,19 @@ var url = 'http://localhost:8080/';
 async.waterfall([
 
     function(callback) {
-      request.get(url + 'getSessionId', function(err, res, body) {
+      request.get(url + 'getSessionId', function(error, response, body) {
         callback(null, JSON.parse(body).value);
       });
     },
 
     function(sId, callback) {
-      request.get(url + 'getUserId?sessionId=' + sId, function(err, res, body) {
+      request.get(url + 'getUserId?sessionId=' + sId, function(error, response, body) {
         callback(null, sId, JSON.parse(body).value);
       });
     },
 
     function(sId, uId, callback) {
-      request.get(url + 'getUserName?userId=' + uId, function(err, res, body) {
+      request.get(url + 'getUserName?userId=' + uId, function(error, response, body) {
         callback(null, JSON.parse(body).value, sId)
       })
     }
